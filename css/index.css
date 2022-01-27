@@ -210,13 +210,11 @@
           box-sizing: border-box;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 350px (auto)[3];
       grid-template-columns: 350px repeat(3, auto);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: 'header left center right'
- 'main left center right'
- 'social left center right'
- 'footer left center right';
+      grid-template-areas: 'header left center right' 'main left center right' 'social left center right' 'footer left center right';
   grid-column-gap: 120px;
 }
 
@@ -321,11 +319,7 @@
     -ms-grid-columns: auto auto 120px;
         grid-template-columns: auto auto 120px;
     grid-column-gap: 50px;
-        grid-template-areas: 'header header header '
- 'main main main'
- 'left center right'
- 'social social social'
- 'footer footer footer';
+        grid-template-areas: 'header header header ' 'main main main' 'left center right' 'social social social' 'footer footer footer';
   }
   .footer__data {
     font-family: 'Rubik';
@@ -461,7 +455,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./../img/hero-illustration.svg");
+  background-image: url("../img/hero-illustration.svg");
   background-repeat: no-repeat;
   background-size: 45% 75%;
   background-position: right 0 top 20%;
@@ -622,8 +616,7 @@
 .about__item {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'left header'
- 'left main';
+      grid-template-areas: 'left header' 'left main';
   grid-column-gap: 40px;
   grid-row-gap: 5px;
   height: 60px;
@@ -731,9 +724,7 @@
 .features__content {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'left header'
- 'left main'
- 'left list';
+      grid-template-areas: 'left header' 'left main' 'left list';
   grid-column-gap: 170px;
   grid-row-gap: 20px;
 }
@@ -775,7 +766,7 @@
 
 .features__item {
   margin-bottom: 15px;
-  background: url("./../img/mark1.svg") no-repeat;
+  background: url("../img/mark1.svg") no-repeat;
 }
 
 @media screen and (max-width: 1200px) {
@@ -797,9 +788,7 @@
     height: 650px;
   }
   .features__content {
-        grid-template-areas: 'header header'
- 'main main'
- 'left list';
+        grid-template-areas: 'header header' 'main main' 'left list';
     grid-column-gap: 50px;
     grid-row-gap: 20px;
     -ms-grid-columns: 60% 40%;
@@ -828,7 +817,7 @@
   }
   .features__item {
     margin-bottom: 15px;
-    background: url("./../img/mark1.svg") no-repeat;
+    background: url("../img/mark1.svg") no-repeat;
   }
 }
 
@@ -842,9 +831,7 @@
     position: relative;
   }
   .features__content {
-        grid-template-areas: 'header'
- 'main'
- 'list';
+        grid-template-areas: 'header' 'main' 'list';
     grid-column-gap: 50px;
     grid-row-gap: 20px;
     -ms-grid-columns: 100%;
@@ -867,7 +854,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: url("./../img/features-illustration.svg");
+    background-image: url("../img/features-illustration.svg");
     background-repeat: no-repeat;
     background-size: 50% auto;
     background-position: left 0 top 80%;
@@ -886,9 +873,7 @@
     position: relative;
   }
   .features__content {
-        grid-template-areas: 'header'
- 'main'
- 'list';
+        grid-template-areas: 'header' 'main' 'list';
     grid-column-gap: 0;
     grid-row-gap: 20px;
     -ms-grid-columns: 100%;
@@ -969,7 +954,7 @@
 
 .plans-item__point {
   margin-bottom: 10px;
-  background: url("./../img/mark2.svg") no-repeat;
+  background: url("../img/mark2.svg") no-repeat;
 }
 
 .plans-item__price {
@@ -1333,9 +1318,7 @@
       grid-template-columns: 50px 200px 50px;
   -ms-grid-rows: 25px 25px 1fr;
       grid-template-rows: 25px 25px 1fr;
-      grid-template-areas: 'left header right'
- 'left footer right'
- 'main main main';
+      grid-template-areas: 'left header right' 'left footer right' 'main main main';
   grid-column-gap: 20px;
 }
 
@@ -1399,7 +1382,7 @@
   font-size: 16px;
   line-height: 30px;
   color: #0B132A;
-  background: url("./../img/star.svg") no-repeat;
+  background: url("../img/star.svg") no-repeat;
   background-size: 16px 16px;
   background-position: right 0 top 40%;
 }
