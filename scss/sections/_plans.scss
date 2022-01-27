@@ -38,7 +38,7 @@
         }
         &__point{
             margin-bottom: 10px;
-            background: url('/img/mark2.svg') no-repeat;
+            background: url('./../img/mark2.svg') no-repeat;
         }
         &__price{
             @include font(25px, 400, 30px); 
