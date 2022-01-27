@@ -1,0 +1,79 @@
+@import './../helpers/mixins';
+
+.map{
+    text-align: center;
+    &__title{
+        width: 385px;
+        margin: 0 auto;
+    }
+    &__text{
+        width: 555px;
+        margin: 20px auto 155px auto;
+    }
+    &__illustration{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    &__partners{
+        display: flex;
+        height: 210px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item{
+        width: 18%;
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    .map{
+        &__text{
+            margin: 20px auto 55px auto;
+        }
+        &__partners{
+            height: 150px;
+            justify-content: space-evenly;
+        }
+        &__item{
+            width: 15%;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    .map{
+        height: auto;
+        &__text{
+            width: 90%;
+        }
+        &__partners{
+            height: auto;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5%;
+        }
+        &__item{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        &__link{
+            width: 90%;
+        }
+    }
+}
+@media screen and (max-width: 576px){
+    .map{
+        &__text,  &__title{
+            width: 90%;
+        }
+        &__item{
+            width: 45%;
+        }
+    }
+}

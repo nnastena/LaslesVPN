@@ -1,0 +1,227 @@
+@import './../helpers/mixins';
+
+.plans{
+    height: 1180px;
+    padding-top: 80px;
+    text-align: center;
+    &__text{
+        width: 550px;
+        margin: 20px auto 60px;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__item{
+        height: 760px;
+        width: 330px;
+        background: #FFFFFF;
+        border: 2px solid #DDDDDD;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+    &__item:hover{
+        border-color: #F53838;
+    }
+
+    &-item{
+        &__title{
+            @include font(18px, 500, 30px); 
+            color: #0B132A;
+            margin: 30px auto;
+        }
+        &__list{
+            text-align: left;
+            width: 190px;
+            height: 230px;
+            margin: 0 auto;
+        }
+        &__point{
+            margin-bottom: 10px;
+            background: url('./../../img/mark2.svg') no-repeat;
+        }
+        &__price{
+            @include font(25px, 400, 30px); 
+            color: #0B132A;
+            margin-top: 50px
+        }
+        &__value{
+            @include font(25px, 500, 30px); 
+            color: #0B132A;
+        }
+        &__button1{
+            margin: 20px auto;
+            width: 178px;
+            height: 45px;
+            color: #F53838;
+            border-color: #F53838;
+            z-index: 1;
+        }
+        &__button1:hover{
+            background-color: #F53838;
+        }
+        &__img{
+            width: 145px;
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .plans{
+        height: 920px;
+        padding-top: 30px;
+        &__item{
+            height: 610px;
+            width: 290px;
+        }
+        &-item{
+            &__title{
+               margin-top: 20px;
+               margin-bottom: 10px;
+            }
+            &__list{
+                height: 215px;
+            }
+            &__point{
+                margin-bottom: 7px;
+            }
+            &__price{
+                @include font(18px, 400, 30px);
+                margin-top: 15px
+            }
+            &__value{
+                @include font(18px, 500, 30px);
+            }
+            &__img{
+                width: 145px;
+                margin: 0 auto;
+                margin-top: 30px;
+            }
+            &__button1{
+                margin: 15px auto;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 992px){
+    .plans{
+        height: 1350px;
+        &__text{
+            width: 550px;
+            margin-bottom: 0;
+        }
+        &__list{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        &__item{
+            height: auto;
+            margin-top: 40px;
+        }
+        &-item{
+            &__list{
+                height: 155px;
+            }
+        }
+        &-item:last-child{
+            .plans-item__list{
+                height: 185px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .plans{
+        height: 2210px;
+        &__text{
+            width: 90%;
+        }
+        &__item{
+            width: 330px;
+            height: auto;
+            margin-top: 35px;
+        }
+        &-item{
+            &__img{
+                width: 170px;
+                margin: 0 auto;
+                margin-top: 50px;
+            }
+            &__title{
+                @include font(20px, 500, 35px); 
+                margin: 30px auto 20px auto;
+            }
+            &__list{
+                height: auto;
+            }
+            &__point{
+                margin-bottom: 10px;
+            }
+            &__price{
+                @include font(18px, 400, 25px);
+                margin-top: 20px;
+            }
+            &__value{
+                @include font(18px, 500, 25px);
+            }
+            &__button1{
+                margin-bottom: 25px;
+                width: 178px;
+                height: 45px;
+            }
+        }
+        &-item:last-child{
+            .plans-item__list{
+                height: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .plans{
+        height: 1830px;
+        &__text{
+            width: 90%;
+        }
+        &__item{
+            width: 290px;
+            height: auto;
+            margin-top: 20px;
+        }
+        &-item{
+            &__img{
+                width: 150px;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+            &__title{
+                margin: 10px auto 10px auto;
+            }
+            &__list{
+                height: auto;
+            }
+            &__point{
+                margin-bottom: 7px;
+            }
+            &__price{
+                @include font(18px, 400, 25px);
+                margin-top: 20px;
+            }
+            &__value{
+                @include font(18px, 500, 25px);
+            }
+            &__button1{
+                margin-bottom: 25px;
+                width: 178px;
+                height: 45px;
+            }
+        }
+    }
+}

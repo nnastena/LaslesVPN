@@ -1,0 +1,265 @@
+@import './components/header';
+@import './components/footer';
+
+@import'./sections/hero';
+@import'./sections/about';
+@import'./sections/features';
+@import'./sections/plans';
+@import'./sections/map';
+@import'./sections/reviews';
+@import'./sections/subscribe';
+
+@import './helpers/mixins';
+
+img{
+    width: 100%;
+}
+body, h1,h2,h3,h4,h5, h6, h2, ul, p, a, img, button{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover, button:hover{
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
+}
+
+
+.body{
+    background-color: #F6F6F6;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.aside{
+    background: linear-gradient(180deg, #F8F8F8 -45.04%, rgba(248, 248, 248, 0) 88.56%);
+    position: relative;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    &__name{
+        @include font(20px, 500, 24px);
+        color: #0B132A;
+    }
+    &__img{
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+    }
+}
+.text{
+    @include font(16px, normal, 30px);
+    color: #4F5665;
+}
+.title{
+    @include font(35px, 500, 50px);
+    color: #0B132A;
+}
+.paragraph{
+    @include font(14px, normal, 30px); 
+    color: #4F5665;
+    padding-left: 33px;
+    background-size: 20px 20px;
+    background-position: left;
+}
+
+
+.button1{
+    border: 1px solid;
+    box-sizing: border-box;
+    border-radius: 50px;
+    @include font(16px, 500, 19px);
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.button1::after{
+    content: '';
+    position: absolute;
+    background: rgba(245, 56, 56, 0.35);
+    filter: blur(30px);
+    border-radius: 60px;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top: 40%;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+}
+.button1:hover{
+    color: white;
+}
+.button1:hover::after{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+
+.button2{
+    background: #F53838;
+    border: 1px solid #F53838;
+    border-radius: 10px;
+    @include font(16px, bold, 25px);
+    color: #FFFFFF;
+    position: relative;
+}
+.button2::after{
+    content: '';
+    position: absolute;
+    background: rgba(245, 56, 56, 0.35);
+    filter: blur(54px);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top: 40%;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+
+.panel{
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+.panel::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    height: 100%;
+    background: #0D1025;
+    opacity: 0.06;
+    z-index: -1;
+    filter: blur(114px);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1200px){
+    .container{
+        width: 960px;
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    .container{
+        width: 720px;
+    }
+    .logo{
+        &__name{
+            @include font(18px, 500, 24px);
+        }
+        &__img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .text{
+        @include font(14px, normal, 25px);
+    }
+    .title{
+        @include font(28px, 500, 43px);
+    }
+    .paragraph{
+        @include font(12px, normal, 25px);
+        padding-left: 33px;
+        background-size: 20px 20px;
+    }
+    .button1{
+        border-radius: 50px;
+        @include font(14px, 500, 19px);
+    }
+    .button1::after{
+        filter: blur(30px);
+        border-radius: 60px;
+    }
+
+    .button2{
+        border-radius: 10px;
+        @include font(14px, bold, 25px);
+    }
+    .button2::after{
+        filter: blur(54px);
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 540px;
+    }
+    .logo{
+        &__name{
+            @include font(20px, 500, 25px);
+        }
+        &__img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .text{
+        @include font(18px, normal, 24px);
+    }
+    .title{
+        @include font(30px, 500, 43px);
+    }
+    .paragraph{
+        @include font(16px, normal, 24px);
+        padding-left: 33px;
+        background-size: 20px 20px;
+    }
+    .button1{
+        border-radius: 40px;
+        @include font(16px, 500, 20px);
+    }
+    .button1::after{
+        filter: blur(20px);
+        border-radius: 40px;
+    }
+
+    .button2{
+        border-radius: 10px;
+        @include font(16px, bold, 25px);
+    }
+    .button2::after{
+        filter: blur(40px);
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .container{
+        margin: 0 5%;
+        width: 90%;
+    }
+    .logo{
+        &__name{
+            display: none;
+        }
+    }
+    .text{
+        @include font(16px, normal, 24px);
+    }
+    .title{
+        @include font(25px, 500, 38px);
+    }
+    .paragraph{
+        @include font(14px, normal, 24px);
+        padding-left: 33px;
+        background-size: 20px 20px;
+    }
+}

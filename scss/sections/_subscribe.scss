@@ -1,0 +1,83 @@
+@import './../helpers/mixins';
+
+.subscribe{
+    position: absolute;
+    left: 50%;
+    bottom: -115px;
+    transform: translate(-50%, 0);
+    &__panel{
+        height: 233px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 70px;
+    }
+    &__description{
+        width: 370px;
+    }
+    &__title{
+        margin-bottom: 20px;
+    }
+    &__button2{
+        height: 60px;
+        width: 250px;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .subscribe{
+        &__panel{
+            height: 190px;
+            padding: 0 50px;
+        }
+        &__description{
+            width: 370px;
+        }
+        &__title{
+            margin-bottom: 15px;
+        }
+        &__button2{
+            height: 48px;
+            width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .subscribe{
+        position: absolute;
+        left: 50%;
+        bottom: -115px;
+        transform: translate(-50%, 0);
+        &__panel{
+            height: auto;
+            display: block;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 30px;
+        }
+        &__description{
+            width: 370px;
+        }
+        &__title{
+            margin-bottom: 10px;
+        }
+        &__button2{
+            margin-top: 23px;
+            height: 55px;
+            width: 220px;
+            z-index: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .subscribe{
+        left: 0;
+        transform: translate(0, 0);
+        &__description{
+            width: 100%;
+        }
+    }
+}

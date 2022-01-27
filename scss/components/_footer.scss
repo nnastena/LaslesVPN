@@ -1,0 +1,172 @@
+@import './../helpers/mixins';
+
+
+.footer{
+    background: #F8F8F8;
+    height: 570px;
+    &__container{
+        
+        padding-top: 180px;
+        box-sizing: border-box;
+
+        display: grid;
+        grid-template-columns: 350px repeat(3, auto);
+        grid-template-rows: auto;
+        grid-template-areas:'header left center right'
+                            'main left center right'
+                            'social left center right'
+                            'footer left center right';
+        grid-column-gap: 120px;
+    }
+    &__logo{
+        grid-area: header;
+    }
+    &__text{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        grid-area: main;
+    }
+    &__socials{
+        display: flex;
+        grid-area: social;
+    }
+    &__social{
+        height: 60px;
+        width: 60px;
+    }
+    &__data{
+        grid-area: footer;
+        @include font(16px, normal, 30px);
+        color: #AFB5C0;
+    }
+    &-list{
+        &_products{
+            grid-area: left;
+        }
+        &_pages{
+            grid-area: center;
+        }
+        &_engage{
+            grid-area: right;
+        }
+
+        &__title{
+            @include font(18px, 500, 30px);
+            color: #0B132A;
+            display: block;
+            margin-bottom: 20px
+        }
+        &__link{
+            @include font(16px, normal, 30px);
+            color: #4F5665;
+        }
+        &__item{
+            margin-bottom: 10px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1200px){
+    .footer{
+        &__container{
+            grid-column-gap: 90px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    .footer{
+        height: auto;
+        &__container{
+            padding-top: 160px;
+            grid-template-columns: auto auto 120px ;
+            grid-column-gap: 50px;
+            grid-template-areas:'header header header '
+                            'main main main'
+                            'left center right'
+                            'social social social'
+                            'footer footer footer';
+        }
+        &__data{
+            @include font(14px, normal, 25px);
+        }
+        &__social{
+            height: 50px;
+            width: 50px;
+            margin-top: 10px;
+        }
+        &-list{
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            &__title{
+                @include font(16px, 500, 25px);
+                margin-bottom: 17px;
+                width: 100%;
+            }
+            &__link{
+                @include font(14px, normal, 20px);
+            }
+            &__item{
+                margin-bottom: 9px;
+                width: 50%;
+            }
+        }
+        &-list:last-child{
+            display: block;
+            .footer-list__item{
+                margin-bottom: 9px;
+                width: 100%;
+            }
+        }
+        &__text{
+            width: 50%;
+            height: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .footer{
+        &__text{
+            width: 70%;
+            height: auto;
+            margin-bottom: 40px;
+        }
+        &__social{
+            height: 70px;
+            width: 70px;
+            margin-top: 20px;
+        }
+        &__container{
+            grid-template-columns: 2fr 3fr 120px ;
+            grid-column-gap: 10px;
+        }
+        &-list{
+            &__title{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .footer{
+        &__text{
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        &__container{
+            grid-template-columns: 2fr 3fr 2fr;
+            grid-column-gap: 10px;
+        }
+        &-list{
+            display: block;
+            &__title{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

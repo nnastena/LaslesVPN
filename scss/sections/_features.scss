@@ -1,0 +1,159 @@
+@import './../helpers/mixins';
+
+.features{
+    height: 650px;
+    display: flex;
+    align-items: center;
+    &__content{
+        display: grid;
+        grid-template-areas:'left header'
+                            'left main'
+                            'left list';
+        grid-column-gap: 170px;
+        grid-row-gap: 20px;
+    }
+    &__illustration{
+        grid-area: left;
+        width: 510px;
+        display: flex;
+        justify-content: center;
+    }
+    &__title{
+        margin-top: 50px;
+        grid-area: header;
+        width: 385px;
+    }
+    &__text{
+        grid-area: main;
+    }
+    &__list{
+        grid-area: list;
+    }
+    &__item{
+        margin-bottom: 15px;
+        background: url('./../../img/mark1.svg') no-repeat;
+    }
+
+}
+
+@media screen and (max-width: 1200px){
+    .features{
+        height: 600px;
+        &__content{
+            grid-column-gap: 100px;
+            grid-template-columns: 45% 1fr;
+        }
+        &__illustration{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    .features{
+        height: 650px;
+        &__content{
+            grid-template-areas:'header header'
+                                'main main'
+                                'left list';
+            grid-column-gap: 50px;
+            grid-row-gap: 20px;
+            grid-template-columns: 60% 40%;
+        }
+        &__illustration{
+            width: 100%;
+            height: auto;
+        }
+        &__title{
+            margin: 0 auto;
+            margin-top: 50px;
+            grid-area: header;
+            width: 385px;
+            text-align: center;
+        }
+        &__text{
+            text-align: center;
+            margin: 0 auto;
+            width: 550px;
+        }
+        &__list{
+            margin-top: 30px;
+        }
+        &__item{
+            margin-bottom: 15px;
+            background: url('./../../img/mark1.svg') no-repeat;
+        }
+    
+    }
+}
+
+@media screen and (max-width: 768px){
+    .features{
+        align-items: flex-start;
+        height: 500px;
+        z-index: 1;
+        position: relative;
+        &__content{
+            grid-template-areas:'header'
+                                'main'
+                                'list';
+            grid-column-gap: 50px;
+            grid-row-gap: 20px;
+            grid-template-columns: 100%;
+        }
+        &__text{
+            width:90%;
+        }
+        &__list{
+           margin-left: 50%;
+           margin-top: 10px;
+        }
+        &__illustration{
+            display: none;
+        }
+    }
+    .features::before{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./../../img/features-illustration.svg');
+        background-repeat:  no-repeat;
+        background-size: 50% auto;
+        background-position: left 0 top 80%;
+        opacity: 0.7;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .features{
+        align-items: flex-start;
+        height: 500px;
+        z-index: 1;
+        position: relative;
+        &__content{
+            grid-template-areas:'header'
+                                'main'
+                                'list';
+            grid-column-gap: 0;
+            grid-row-gap: 20px;
+            grid-template-columns:100%;
+        }
+        &__text{
+            grid-area: main;
+            width: 100%;
+        }
+        &__title{
+            grid-area: header;
+            width: 100%;
+        }
+        &__list{
+            grid-area: list;
+           margin-left: 40%;
+           margin-top: 10px;
+        }
+    }
+}
